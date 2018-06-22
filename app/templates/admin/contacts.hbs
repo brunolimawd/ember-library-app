@@ -5,13 +5,15 @@
         <tr>
             <th>E-mail</th>
             <th>Message</th>
+            <th>Actions</th>
         </tr>
     </thead>
     <tbody>
         {{#each model as |contact|}}
         <tr>
-            <th>{{contact.email}}</th>
+            <td>{{contact.email}}</td>
             <td>{{contact.message}}</td>
+            <td><button class="btn btn-danger btn-xs" {{action 'deleteContact' contact}}>Delete</button></td>
         </tr>
         {{/each}}
     </tbody>
